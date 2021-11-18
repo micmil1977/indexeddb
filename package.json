@@ -33,7 +33,7 @@
                             "perhaps":                      "0.0.12",
                             "turnstile":                    "6.0.0-alpha.82",
                             "rescue":                       "7.0.0-alpha.18",
-                            "verbatim":                     "github:micmil1977/verbatim#814f711370437e0a4748ca5688a99f508a256ddc"
+                            "verbatim":                     "github:micmil1977/verbatim#4e270d0be65a6220d1583f0b709fe322771c53ae"
     },
     "devDependencies":
     {

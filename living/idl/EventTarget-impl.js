@@ -1,5 +1,5 @@
 "use strict";
-const DOMException = require("domexception/webidl2js-wrapper");
+const DOMException = require("domexception");
 const hooks = require('async_hooks')
 
 const reportException = require("../helpers/runtime-script-errors");

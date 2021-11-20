@@ -22,7 +22,7 @@ const IDBIndex = require('./living/generated/IDBIndex')
 const IDBCursor = require('./living/generated/IDBCursor')
 const IDBCursorWithValue = require('./living/generated/IDBCursorWithValue')
 const DOMStringList = require('./living/generated/DOMStringList')
-const WrapperDOMException = require("domexception/webidl2js-wrapper")
+// const WrapperDOMException = require("domexception/webidl2js-wrapper")
 
 require('./global').add(exports)
 
@@ -42,7 +42,7 @@ IDBIndex.install(exports, [ 'Window' ])
 IDBCursor.install(exports, [ 'Window' ])
 IDBCursorWithValue.install(exports, [ 'Window' ])
 DOMStringList.install(exports, [ 'Window' ])
-WrapperDOMException.install(exports, [ 'Window' ])
+// WrapperDOMException.install(exports, [ 'Window' ])
 
 require('./IDBKeyRange-static').patch(exports)
 

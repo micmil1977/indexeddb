@@ -56,7 +56,8 @@ class Transactor {
 
     transaction (extra, names, readOnly) {
         const wait = { head: null, readOnly, count: 1, names, extra }
-        for (const name of names) {
+        for (const nameOrg of names) {
+            const name = `QUEUE__${nameOrg}`;
             const node = { wait, name, next: wait.head }
             wait.head = node
             this._queues[name] || (this._queues[name] = { waiting: [], running: null })
@@ -66,7 +67,8 @@ class Transactor {
     }
 
     complete (names) {
-        for (const name of names) {
+        for (const nameOrg of names) {
+            const name = `QUEUE__${nameOrg}`;
             const queue = this._queues[name]
             queue.running.count--
             if (queue.running.count == 0) {
